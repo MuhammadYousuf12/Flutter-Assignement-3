@@ -158,7 +158,7 @@ class _UserProfileState extends State<UserProfile> {
                     Align(
                       alignment: Alignment.centerLeft,
                       child: CircleAvatar(
-                        radius: 80,
+                        radius: 50,
                         backgroundImage: AssetImage('assets/profile.jpg'),
                       ),
                     ),
