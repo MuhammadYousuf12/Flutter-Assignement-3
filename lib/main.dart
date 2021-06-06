@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '//': (context) => LoginPage(),
+        '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
-        '/': (context) => UserProfile(),
         '/history': (context) => History(),
+        '/UserProfile': (context) => UserProfile(),
       },
     );
   }
