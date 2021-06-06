@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:jeelani_store/history.dart';
 import 'package:jeelani_store/profile.dart';
 
+import 'login_page.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -37,7 +39,7 @@ class _HomePageState extends State<HomePage> {
         ),
         drawer: Drawer(
           child: Container(
-            color: Color(0xffE6E6E6),
+            color: Color(0xffFAFAFA),
             child: ListView(
               children: [
                 DrawerHeader(
@@ -64,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Material(
-                  color: Color(0xffE6E6E6),
+                  color: Color(0xffFAFAFA),
                   child: InkWell(
                     child: ListTile(
                       onTap: () {
@@ -87,7 +89,26 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Material(
-                  color: Color(0xffE6E6E6),
+                  color: Color(0xffFAFAFA),
+                  child: InkWell(
+                    child: ListTile(
+                      onTap: () {
+                        return null;
+                      },
+                      leading:
+                          Icon(CupertinoIcons.home, color: Color(0xffFF0000)),
+                      title: Text(
+                        'Home',
+                        textScaleFactor: 1.2,
+                        style: TextStyle(
+                            color: Color(0xffFF0000),
+                            fontFamily: "'Open Sans'"),
+                      ),
+                    ),
+                  ),
+                ),
+                Material(
+                  color: Color(0xffFAFAFA),
                   child: InkWell(
                     child: ListTile(
                       onTap: () {
@@ -108,11 +129,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Material(
-                  color: Color(0xffE6E6E6),
+                  color: Color(0xffFAFAFA),
                   child: InkWell(
                     child: ListTile(
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
                       },
                       leading: Icon(Icons.logout, color: Color(0xffFF0000)),
                       title: Text(
@@ -144,8 +168,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset(
-                              'assets/products/purifier.jpg',
+                            leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/purifier.jpg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                             title: Text(
                               'Water Purifier',
@@ -179,7 +208,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -203,7 +232,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset('assets/products/set.jpg'),
+                            leading: Container(
+                                height: 70,
+                                width: 70,
+                                child: Image.asset(
+                                  'assets/products/set.jpg',
+                                  fit: BoxFit.fill,
+                                )),
                             title: Text(
                               'Zircon Combo Set',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -236,7 +271,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -258,7 +293,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/bucket.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/bucket.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Big Rice Bucket',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -291,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -312,9 +353,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/suit.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset('assets/products/suit.jpg',
+                                  fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collection',
+                            'Ladies Wedding Collec..',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -345,7 +390,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -366,7 +411,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/lamp.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/lamp.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Balance Lamp',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -399,7 +450,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -420,9 +471,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/bowl set.jpg',
-                            width: 60,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/bowl set.jpg',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           title: Text(
                             '4 Pieces Bowl Set',
@@ -456,7 +511,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -477,9 +532,14 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/cookware.jpg',
-                            width: 55,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/cookware.jpg',
+                              fit: BoxFit.fill,
+                              // width: 55,
+                            ),
                           ),
                           title: Text(
                             '9 Pieces Cookware',
@@ -513,7 +573,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -535,8 +595,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset(
-                              'assets/products/purifier.jpg',
+                            leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/purifier.jpg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                             title: Text(
                               'Water Purifier',
@@ -570,7 +635,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -594,7 +659,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset('assets/products/set.jpg'),
+                            leading: Container(
+                                height: 70,
+                                width: 70,
+                                child: Image.asset(
+                                  'assets/products/set.jpg',
+                                  fit: BoxFit.fill,
+                                )),
                             title: Text(
                               'Zircon Combo Set',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -627,7 +698,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -649,7 +720,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/bucket.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/bucket.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Big Rice Bucket',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -682,7 +759,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -703,9 +780,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/suit.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset('assets/products/suit.jpg',
+                                  fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collection',
+                            'Ladies Wedding Collec..',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -736,7 +817,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -757,7 +838,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/lamp.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/lamp.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Balance Lamp',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -790,7 +877,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -811,9 +898,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/bowl set.jpg',
-                            width: 60,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/bowl set.jpg',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           title: Text(
                             '4 Pieces Bowl Set',
@@ -847,7 +938,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -868,9 +959,14 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/cookware.jpg',
-                            width: 55,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/cookware.jpg',
+                              fit: BoxFit.fill,
+                              // width: 55,
+                            ),
                           ),
                           title: Text(
                             '9 Pieces Cookware',
@@ -904,7 +1000,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -926,8 +1022,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset(
-                              'assets/products/purifier.jpg',
+                            leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/purifier.jpg',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                             title: Text(
                               'Water Purifier',
@@ -961,7 +1062,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -985,7 +1086,13 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5.0),
                           child: ListTile(
-                            leading: Image.asset('assets/products/set.jpg'),
+                            leading: Container(
+                                height: 70,
+                                width: 70,
+                                child: Image.asset(
+                                  'assets/products/set.jpg',
+                                  fit: BoxFit.fill,
+                                )),
                             title: Text(
                               'Zircon Combo Set',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -1018,7 +1125,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.4,
+                                textScaleFactor: 1.2,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -1040,7 +1147,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/bucket.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/bucket.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Big Rice Bucket',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -1073,7 +1186,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1094,9 +1207,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/suit.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset('assets/products/suit.jpg',
+                                  fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collection',
+                            'Ladies Wedding Collec..',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -1127,7 +1244,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1148,7 +1265,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset('assets/products/lamp.jpg'),
+                          leading: Container(
+                              height: 70,
+                              width: 70,
+                              child: Image.asset(
+                                'assets/products/lamp.jpg',
+                                fit: BoxFit.fill,
+                              )),
                           title: Text(
                             'Balance Lamp',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -1181,7 +1304,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1202,9 +1325,13 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/bowl set.jpg',
-                            width: 60,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/bowl set.jpg',
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           title: Text(
                             '4 Pieces Bowl Set',
@@ -1238,7 +1365,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1259,9 +1386,14 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: ListTile(
-                          leading: Image.asset(
-                            'assets/products/cookware.jpg',
-                            width: 55,
+                          leading: Container(
+                            height: 70,
+                            width: 70,
+                            child: Image.asset(
+                              'assets/products/cookware.jpg',
+                              fit: BoxFit.fill,
+                              // width: 55,
+                            ),
                           ),
                           title: Text(
                             '9 Pieces Cookware',
@@ -1295,7 +1427,7 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.4,
+                              textScaleFactor: 1.2,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
