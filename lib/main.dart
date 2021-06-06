@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jeelani_store/history.dart';
 import 'package:jeelani_store/home.dart';
+import 'package:jeelani_store/profile.dart';
 import 'login_page.dart';
 import 'home.dart';
 
@@ -15,7 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/profile': (context) => UserProfile(),
+        '/history': (context) => History(),
       },
     );
   }
