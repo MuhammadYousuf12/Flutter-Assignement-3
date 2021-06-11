@@ -160,8 +160,8 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    width: 395,
-                    height: 100,
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
                     child: Card(
                       child: Align(
                         alignment: Alignment.centerLeft,
