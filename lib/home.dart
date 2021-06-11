@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:jeelani_store/history.dart';
 import 'package:jeelani_store/profile.dart';
 
@@ -161,7 +162,6 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height,
                     child: Card(
                       child: Align(
                         alignment: Alignment.centerLeft,
@@ -208,7 +208,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -224,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -271,7 +272,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -287,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -332,7 +334,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -347,7 +350,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -359,7 +362,8 @@ class _HomePageState extends State<HomePage> {
                               child: Image.asset('assets/products/suit.jpg',
                                   fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collec..',
+                            'Ladies Wedding Collection',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -390,7 +394,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -405,7 +410,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -450,7 +455,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -465,7 +471,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -511,7 +517,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -526,7 +533,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -543,6 +550,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           title: Text(
                             '9 Pieces Cookware',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -573,7 +581,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -587,7 +596,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -635,7 +644,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -651,7 +661,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -698,7 +708,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -714,7 +725,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -759,7 +770,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -774,7 +786,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -786,7 +798,8 @@ class _HomePageState extends State<HomePage> {
                               child: Image.asset('assets/products/suit.jpg',
                                   fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collec..',
+                            'Ladies Wedding Collection',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -817,7 +830,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -832,7 +846,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -877,7 +891,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -892,7 +907,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -938,7 +953,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -953,7 +969,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -970,6 +986,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           title: Text(
                             '9 Pieces Cookware',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -1000,7 +1017,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1014,7 +1032,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1062,7 +1080,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: Text(
                                 'Rs.600',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -1078,7 +1097,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1125,7 +1144,8 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(top: 13.0),
                               child: Text(
                                 'Rs.1,150',
-                                textScaleFactor: 1.2,
+                                textScaleFactor:
+                                    MediaQuery.textScaleFactorOf(context),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffFF0000)),
@@ -1141,7 +1161,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1186,7 +1206,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1201,7 +1222,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1213,7 +1234,8 @@ class _HomePageState extends State<HomePage> {
                               child: Image.asset('assets/products/suit.jpg',
                                   fit: BoxFit.fill)),
                           title: Text(
-                            'Ladies Wedding Collec..',
+                            'Ladies Wedding Collection',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -1244,7 +1266,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.3,200',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1259,7 +1282,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1304,7 +1327,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 18.0),
                             child: Text(
                               'Rs.3,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1319,7 +1343,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1365,7 +1389,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.1,800',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),
@@ -1380,7 +1405,7 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
                   child: Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Card(
                       child: Align(
@@ -1397,6 +1422,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           title: Text(
                             '9 Pieces Cookware',
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Column(
@@ -1427,7 +1453,8 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
                               'Rs.24,000',
-                              textScaleFactor: 1.2,
+                              textScaleFactor:
+                                  MediaQuery.textScaleFactorOf(context),
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xffFF0000)),

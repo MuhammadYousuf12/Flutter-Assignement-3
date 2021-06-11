@@ -175,7 +175,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -224,7 +224,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -272,7 +272,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -317,7 +317,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -361,7 +361,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -406,7 +406,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -452,7 +452,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -498,7 +498,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -547,7 +547,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -595,7 +595,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -640,7 +640,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -684,7 +684,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -729,7 +729,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,
@@ -775,7 +775,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    width: 395,
+                    width: MediaQuery.of(context).size.width,
                     height: 100,
                     child: Align(
                       alignment: Alignment.centerLeft,

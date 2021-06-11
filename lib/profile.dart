@@ -147,16 +147,15 @@ class _UserProfileState extends State<UserProfile> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(6.0),
-              child: Container(
-                width: 400,
-                height: 200,
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 200,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
+                    Container(
                       child: CircleAvatar(
                         radius: 50,
                         backgroundImage: AssetImage('assets/profile.jpg'),
@@ -166,6 +165,7 @@ class _UserProfileState extends State<UserProfile> {
                       alignment: Alignment.centerLeft,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Muhammad Yousuf',
@@ -185,13 +185,22 @@ class _UserProfileState extends State<UserProfile> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 20.0),
-                            child: Text(
-                              'Logout',
-                              textScaleFactor: 1.2,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Colors.purple,
-                                fontSize: 15,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LoginPage()),
+                                );
+                              },
+                              child: Text(
+                                'Logout',
+                                textScaleFactor: 1.2,
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Colors.purple,
+                                  fontSize: 15,
+                                ),
                               ),
                             ),
                           ),
@@ -203,20 +212,23 @@ class _UserProfileState extends State<UserProfile> {
               ),
             ),
             Container(
-              width: 400,
+              width: MediaQuery.of(context).size.width,
               height: 480,
-              // color: Colors.black,
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'ACCOUNT INFORMATION',
-                      style: TextStyle(
-                          color: Color(0xffFF0000),
-                          fontWeight: FontWeight.w500),
-                      textAlign: TextAlign.left,
-                      textScaleFactor: 1.5,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        'ACCOUNT INFORMATION',
+                        style: TextStyle(
+                            color: Color(0xffFF0000),
+                            fontWeight: FontWeight.w500),
+                        textAlign: TextAlign.left,
+                        textScaleFactor: 1.5,
+                      ),
                     ),
                     ListTile(
                       title: Text(

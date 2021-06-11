@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.only(top: 19.0),
                           child: Image.asset(
                             'assets/login.png',
-                            width: 200,
+                            width: MediaQuery.of(context).size.width,
                             height: 200,
                           ),
                         ),
