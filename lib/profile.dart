@@ -153,12 +153,15 @@ class _UserProfileState extends State<UserProfile> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      child: CircleAvatar(
-                        radius: 50,
-                        backgroundImage: AssetImage('assets/profile.jpg'),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20.0),
+                      child: Container(
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('assets/profile.jpg'),
+                        ),
                       ),
                     ),
                     Align(
