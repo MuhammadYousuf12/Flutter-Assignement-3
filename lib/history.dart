@@ -17,6 +17,7 @@ class _HistoryState extends State<History> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Jeelani Store',
       home: GestureDetector(
         onTap: () {
           FocusScope.of(context).requestFocus(FocusNode());

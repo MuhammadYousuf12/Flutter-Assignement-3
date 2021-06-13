@@ -24,8 +24,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Jeelani Store',
       debugShowCheckedModeBanner: false,
-      title: 'Login Page',
       home: GestureDetector(
         onTap: () {
           FocusScope.of(context).requestFocus(FocusNode());
