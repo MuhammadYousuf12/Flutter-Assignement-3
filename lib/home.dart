@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:jeelani_store/history.dart';
 import 'package:jeelani_store/profile.dart';
-
 import 'login_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +21,6 @@ class _HomePageState extends State<HomePage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backwardsCompatibility: false,
           backgroundColor: Color(0xffE6E6E6),
           foregroundColor: Color(0xffFF0000),
           centerTitle: true,
